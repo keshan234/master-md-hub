@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master MD Hub</title>
+</head>
+<body style="background-color: #121212; color: white; font-family: Arial, sans-serif;">
+    <header style="padding: 20px; text-align: center;">
+        <h1>Master MD Hub</h1>
+    </header>
+    <main style="text-align: center;">
+        <p>Welcome to the Master MD Hub test project!</p>
+        <button onclick="sayHello()">Test API</button>
+    </main>
+    <script>
+        async function sayHello() {
+            const res = await fetch('/api/hello');
+            const data = await res.json();
+            alert(data.message);
+        }
+    </script>
+</body>
+</html>
